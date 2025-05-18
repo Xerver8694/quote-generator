@@ -20,6 +20,7 @@ function complete() {
 
 // Show New Quote
 function newQuote() {
+    // Show Loading Animation
     loading()
     //  Select Quote at Random from quotes.js
     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
@@ -31,6 +32,7 @@ function newQuote() {
     }
     // Set Qute, Hide Loader
     quoteText.textContent = quote.text;
+    // Stop Loading Animation
     complete();
 }
 
